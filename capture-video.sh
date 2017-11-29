@@ -1,2 +1,9 @@
 #!/bin/bash
-playCamera -pasta -exposure 150000 -savevideo capture.avi
+exp=150000
+
+if [ -n "$1" ]
+then
+    exp="$1"
+fi
+
+playCamera -pasta -exposure $exp -savevideo capture-$exp.avi

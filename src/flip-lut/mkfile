@@ -1,0 +1,4 @@
+.all:V: flip-lut
+
+&: &.c helpers.c
+	gcc -g $stem.c -fopenmp -lm -o $stem

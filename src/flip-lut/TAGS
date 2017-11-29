@@ -1,0 +1,45 @@
+
+dump.c,107
+#define PRECISION 11,153
+static inline float subpixel_value(13,175
+float unwrap(17,341
+int main(34,696
+
+flip-lut.c,17
+int main(11,153
+
+helpers.c,600
+#define X 3,21
+#define Y 4,33
+#define DIST 5,45
+const float PI 7,61
+float** malloc_f32matrix(10,138
+void free_f32matrix(21,378
+float*** malloc_f32cube(26,455
+void free_f32cube(36,658
+void read_image_header(45,795
+float** load_pgm(64,1143
+float*** load_ppm(100,1847
+void save_pgm(141,2756
+void save_ppm(177,3588
+int* random_phases(217,4612
+float solve_phase_term(245,5070
+float solve_phase(255,5317
+float modulo_sub_pi(260,5506
+float distance_modulo_pi(266,5645
+float grey_scale_erfc(275,5826
+float*** load_codes(647,14068
+void save_phase(710,16252
+void save_color_map(737,17019
+
+args.h,235
+char* argv0;2,42
+#define ARGBEGIN 4,56
+#define ARGS 13,531
+#define ARGI 14,667
+#define ARGF 15,809
+#define ARG_CASE(18,971
+#define LARG_CASE(20,1035
+#define LSARG_CASE(22,1133
+#define WRONG_ARG 25,1280
+#define ARGEND 27,1308

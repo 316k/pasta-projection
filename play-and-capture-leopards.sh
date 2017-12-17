@@ -1,12 +1,12 @@
 #!/bin/bash
 
+exp=150000
+
 if [ -z "$1" ]
 then
-    echo usage: $0 dest-folder [exposition=150000]
+    echo usage: $0 dest-folder/ "[exposition=$exp]"
     exit
 fi
-
-exp=150000
 
 if [ -n "$2" ]
 then
@@ -18,9 +18,10 @@ fi
 
 mkdir "$1"
 
-totem leos.mp4; totem --pause; totem --seek-bwd
+totem --pause; totem --seek-bwd
 sleep 1
 
-(sleep 2.3; totem --play) &
+(sleep 2.5; totem --play) &
 
-timeout 110 ./capture.sh $1 $2
+timeout 80 ./capture.sh "$1" $2
+

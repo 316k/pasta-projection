@@ -1,9 +1,15 @@
 #!/bin/bash
 exp=150000
 
-if [ -n "$1" ]
+if [ -z "$1" ]
 then
-    exp="$1"
+    echo usage: $0 dest.avi "[exposition=$exp]"
+    exit
 fi
 
-playCamera -pasta -exposure $exp -savevideo capture-$exp.avi
+if [ -n "$2" ]
+then
+    exp="$2"
+fi
+
+playCamera -pasta -exposure $exp -savevideo "$1"

@@ -14,15 +14,19 @@ int main(char argc, char** argv) {
     int lut_w, lut_h, img_w, img_h;
 
     int nthreads = 4;
+    float threshold = 0.5;
 
     // Args parsing
     ARGBEGIN
-        ARG_CASE('t')
+    ARG_CASE('t')
         nthreads = ARGI;
-    
+        
+    ARG_CASE('p')
+        threshold = ARGF;
+
     WRONG_ARG
         usage:
-        printf("usage: %s [-t nthreads=%d] cam-img.pgm proj-lut.ppm > out.ppm\n",
+        printf("usage: %s [-t nthreads=%d] [-p threshold=0.5] cam-img.pgm proj-lut.ppm > out.ppm\n",
                argv0, nthreads);
         exit(1);
     ARGEND
@@ -51,7 +55,9 @@ int main(char argc, char** argv) {
             int img_y = y * img_h;
             int img_x = x * img_w;
 
-            out[i][j] = img[img_y][img_x];
+            if(lut[2][i][j] / 65535.0 < threshold) {
+                out[i][j] = img[img_y][img_x];
+            }
         }
 
     save_pgm(NULL, out, lut_w, lut_h, 8);

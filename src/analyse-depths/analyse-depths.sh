@@ -2,7 +2,7 @@
 
 if test -z "$1" || test -z "$2"
 then
-    echo "Usage $0 min max"
+    echo "Usage $0 min max [precision=1000] < input.dat"
     exit -1
 fi
 

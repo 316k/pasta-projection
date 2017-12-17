@@ -8,7 +8,7 @@ import numpy as np
 from img import *
 
 if len(argv) < 3:
-    print("Usage: %s lut1.ppm out.dat [out.png]" % argv[0])
+    print("Usage: %s lut1.ppm out.dat [out.pgm]" % argv[0])
     exit()
 
 # Max blue channel value

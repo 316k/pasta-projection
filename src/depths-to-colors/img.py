@@ -93,7 +93,7 @@ def save_pgm(fname, out, depth):
 
         copy = np.array(out, dtype=dtype)
 
-        f.write(copy.tobytes())
+        f.write(copy.tostring())
 
 def save_ppm(fname, out, depth):
     h, w = out.shape[0], out.shape[1]
@@ -106,7 +106,7 @@ def save_ppm(fname, out, depth):
 
         copy = np.array(out, dtype=dtype)
 
-        f.write(copy.tobytes())
+        f.write(copy.tostring())
 
 def write_img(fname, arr, depth=16):
 

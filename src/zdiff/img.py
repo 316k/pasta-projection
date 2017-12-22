@@ -1,1 +1,1 @@
-/home/k/school/université/08 - Automne 2017/Vision/pasta-projection/src/depths-to-colors/img.py
+../depths-to-colors/img.py

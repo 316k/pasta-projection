@@ -13,7 +13,7 @@ if len(argv) < 3:
     print("Usage: %s dir file1 file2 [...]" % argv[0])
     exit()
 
-thresh = 3
+thresh = 2
 
 outdir = argv[1]
 

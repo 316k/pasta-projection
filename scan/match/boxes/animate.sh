@@ -15,17 +15,17 @@ dir=$(mktemp -d)
 n=0
 while [ -n "$1" ]
 do
-    echo $1S
     depths-to-colors.py "$depthmap" "$1" "$2" $dir/$n.ppm
     let n++
     shift 2
 done
 
 eog $dir/*.ppm
-exit
+
+rm -r $dir
 
 echo "
-481 522
-536 545
-55 577
-583 59"
+0.481 0.522
+0.536 0.545
+0.55 0.577
+0.583 0.59"

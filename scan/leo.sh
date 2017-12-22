@@ -32,6 +32,8 @@ i=$1
     cd $i
     dir=$(ls -d ../../$i/ 2>/dev/null || ls -d ../../$i/ 2>/dev/null)
     playLeopard -cam $dir%03d.png -proj ../../../leo/leopard_1280_720_32B_%03d.png -number 101 -display
+    # playLeopard -iter 40 -cam $dir%03d.png -proj ../../../leo2/hfreq/leopard_1280_720_50B_%03d.png -number 120 -display
+    # playLeopard -iter 40 -cam $dir%03d.png -proj ../../../leo2/normfreq/leopard_1280_720_32B_%03d.png -number 120 -display
 
     convert lutProj15.png lut.ppm
     convert maxCam.png cam.pgm

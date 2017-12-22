@@ -13,7 +13,7 @@ then
     exp="$2"
 fi
 
-# totem doit être lancé en full screen (sur pause) dans le projecteur
+# totem doit être lancé en full screen (sur pause) dans le projecteur (leos-framerate2.mp4)
 # la caméra doit être disponible
 
 mkdir "$1"
@@ -23,5 +23,5 @@ sleep 1
 
 (sleep 2.5; totem --play) &
 
-timeout 80 ./capture.sh "$1" $2
+timeout 180 ./capture.sh "$1" $2
 

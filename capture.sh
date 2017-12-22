@@ -13,4 +13,4 @@ then
 fi
 
 cd $1
-playCamera -pasta -exposure $exp -fps 16 -save cam%03d.png
+playCamera -pasta -exposure $exp -fps 4 -save cam%03d.png
